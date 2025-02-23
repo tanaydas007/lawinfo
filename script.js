@@ -1,90 +1,38 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background: url('https://www.scobserver.in/wp-content/uploads/2020/06/Supreme-Court-2.jpg') no-repeat center center fixed;
-    background-size: cover;
-    margin: 0;
-    padding: 0;
-    color: white;
+document.getElementById("lawForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Form ko submit hone se roke
+
+    let name = document.getElementById("name").value;
+    let mobile = document.getElementById("mobile").value;
+    let problem = document.getElementById("problem").value;
+
+    if (name && mobile && problem) {
+        // ✅ Green Popup Show karna
+        document.getElementById("popupMessage").style.display = "block";
+
+        // ✅ WhatsApp message create karna
+        let whatsappMessage = `🚨 *नया फॉर्म सबमिशन* 🚨%0A%0A📌 *नाम:* ${name}%0A📌 *मोबाइल:* ${mobile}%0A📌 *समस्या:* ${problem}`;
+        
+        // ✅ Aapke WhatsApp number pe message bhejna
+        let whatsappNumber = "919064828221"; // 🔴 Aapka WhatsApp number
+        let whatsappURL = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${whatsappMessage}`;
+        
+        // ✅ WhatsApp open karna (Popup band hone ke baad)
+        setTimeout(function () {
+            window.location.href = whatsappURL;
+        }, 3000); // 3 sec delay tak user popup padh sake
+
+        // ✅ Form reset karna
+        document.getElementById("lawForm").reset();
+    } else {
+        alert("कृपया सभी फ़ील्ड भरें!");
+    }
+});
+
+// ✅ Function to close popup
+function closePopup() {
+    document.getElementById("popupMessage").style.display = "none";
 }
 
-header {
-    background: rgba(44, 62, 80, 0.8); /* Transparent Background */
-    color: white;
-    padding: 20px;
-}
-
-h1 {
-    margin: 0;
-}
-
-.form-section {
-    margin-top: 50px;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 20px;
-    display: inline-block;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 500px;
-}
-
-input, textarea {
-    display: block;
-    width: 90%;
-    padding: 10px;
-    margin: 10px auto;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-textarea {
-    height: 120px; /* Bada box dikhne ke liye */
-    resize: vertical;
-}
-
-button {
-    background: #27AE60;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 18px;
-}
-
-button:hover {
-    background: #219150;
-}
-
-/* ✅ Green Popup Message */
-.popup {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #28a745; /* Green Background */
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.popup button {
-    background: white;
-    color: black;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-.popup button:hover {
-    background: #ddd;
-}
 
 
 
