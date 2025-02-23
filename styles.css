@@ -7,6 +7,18 @@ body {
     padding: 0;
 }
 
+/* ✅ Legal Info Box (Green & Black Mixture) */
+.legal-info {
+    background: linear-gradient(to right, black, green);
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
 /* ✅ Header Styling */
 header {
     background-color: #007bff;  /* 🔹 Blue Header */
@@ -15,6 +27,7 @@ header {
     font-size: 22px;
 }
 
+/* ✅ Navigation Links */
 nav a {
     color: white;
     text-decoration: none;
@@ -22,27 +35,30 @@ nav a {
     margin: 0 10px;
 }
 
+/* ✅ Google AdSense Space */
+.ad-space {
+    height: 90px;
+}
+
 /* ✅ Form Box */
 .content {
     background-color: white;
     padding: 20px;
-    margin: 20px auto;
-    width: 60%;
+    margin: 10px auto;
+    width: 50%;
     border-radius: 10px;
     box-shadow: 0px 0px 10px gray;
 }
 
-/* ✅ Text Colors */
+/* ✅ "अब हर किसी को मिलेगा न्याय" (Green & Blue Gradient) */
 h2 {
-    color: #007bff;
+    background: linear-gradient(to right, green, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 26px;
 }
 
-p {
-    font-size: 18px;
-    color: #333;
-}
-
-/* ✅ Form Styling */
+/* ✅ Form Fields */
 form {
     display: flex;
     flex-direction: column;
@@ -50,23 +66,25 @@ form {
 }
 
 form input, form textarea {
-    width: 80%;
+    width: 90%;
     padding: 10px;
-    margin: 10px 0;
+    margin: 5px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+    box-sizing: border-box;
 }
 
 /* ✅ Submit Button */
 button {
-    background-color: green;  /* 🔹 Green Button */
+    background-color: green;
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 18px;
+    margin-top: 10px;
 }
 
 button:hover {
@@ -75,7 +93,7 @@ button:hover {
 
 /* ✅ Popup Message */
 .popup {
-    background-color: #28a745;  /* 🔹 Green Popup */
+    background-color: #28a745;
     color: white;
     padding: 15px;
     position: fixed;
@@ -85,7 +103,3 @@ button:hover {
     box-shadow: 0px 0px 10px gray;
     display: none;
 }
-
-
-
-
