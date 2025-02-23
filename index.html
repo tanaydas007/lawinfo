@@ -3,62 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Law Info - अब हर किसी को मिलेगा न्याय</title>
-    
-    <!-- ✅ Google AdSense Global Script -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8140149118169794"
-        crossorigin="anonymous"></script>
-
+    <title>Legal Info - न्याय सबके लिए</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8140149118169794" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <header>
-        <h1>Law Info</h1>
-        <p>अब हर किसी को मिलेगा न्याय</p>
-        <p style="font-size: 14px; font-weight: bold; color: red;">
-            (CAPF, CAPSP, GJSPKK, Disability Pension) Legal Advice
-        </p>
+        <h1>Legal Info</h1>
+        <p style="color: red; font-weight: bold;">(CAPF, CAPSP, GJSPKK Disability Pension) Legal Advice</p>
+        <nav>
+            <a href="about.html">About Us</a> | 
+            <a href="disclaimer.html">Disclaimer</a>
+        </nav>
     </header>
 
-    <!-- ✅ Header Ke Niche Google AdSense Ad -->
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-8140149118169794"
-         data-ad-slot="1234567890"
-         data-ad-format="auto"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
+    <section class="content">
+        <h2>अब हर किसी को मिलेगा न्याय</h2>
+        <p>हम आपकी मदद करने के लिए हमेशा तैयार हैं। अपनी समस्या नीचे दर्ज करें।</p>
 
-    <section class="form-section">
-        <h2>अपना नाम, मोबाइल नंबर और समस्या दर्ज करें</h2>
-        <form id="lawForm">
-            <input type="text" id="name" placeholder="अपना नाम" required>
-            <input type="tel" id="mobile" placeholder="मोबाइल नंबर" required>
-            <textarea id="problem" placeholder="अपनी समस्या यहाँ लिखें..." required></textarea>
+        <!-- Google AdSense Ad Below Header -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-8140149118169794"
+             data-ad-slot="1234567890"
+             data-ad-format="auto"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+        <form id="contactForm">
+            <label>नाम:</label>
+            <input type="text" id="name" required>
+
+            <label>मोबाइल नंबर:</label>
+            <input type="tel" id="mobile" required>
+
+            <label>अपनी समस्या लिखें:</label>
+            <textarea id="problem" required></textarea>
+
             <button type="submit">सबमिट करें</button>
         </form>
+
+        <!-- Google AdSense Ad Below Form -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-8140149118169794"
+             data-ad-slot="0987654321"
+             data-ad-format="auto"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
     </section>
 
-    <!-- ✅ Form Ke Niche Google AdSense Ad -->
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-8140149118169794"
-         data-ad-slot="1234567890"
-         data-ad-format="auto"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-
-    <!-- ✅ Green Popup Message -->
     <div id="popupMessage" class="popup">
-        <p>शुक्रिया! हम अगले 3-4 घंटे में आपसे संपर्क करेंगे।<br>  
-        जय हिंद! वंदे मातरम्! अपना ध्यान रखिएगा!</p>
-        <button onclick="closePopup()">OK</button>
+        धन्यवाद! अगले 3-4 घंटों में हम आपसे संपर्क करेंगे। <br> जय हिंद! वंदे मातरम! <br> अपना ध्यान रखिएगा।
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            document.getElementById("popupMessage").style.display = "block";
+
+            setTimeout(function(){
+                document.getElementById("popupMessage").style.display = "none";
+            }, 5000);
+        });
+    </script>
+
 </body>
 </html>
 
