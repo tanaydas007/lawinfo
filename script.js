@@ -1,3 +1,4 @@
+
 document.getElementById("lawForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Form ko submit hone se roke
 
@@ -32,8 +33,6 @@ document.getElementById("lawForm").addEventListener("submit", function(event) {
 function closePopup() {
     document.getElementById("popupMessage").style.display = "none";
 }
-
-
 
 
 
