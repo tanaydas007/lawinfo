@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Law Info - अब हर किसी को मिलेगा न्याय</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Law Info</h1>
+        <p>अब हर किसी को मिलेगा न्याय</p>
+        <p style="font-size: 14px; font-weight: bold; color: red;">
+            (CAPF, CAPSP, GJSPKK, Disability Pension) Legal Advice
+        </p>
+    </header>
+
+    <section class="form-section">
+        <h2>अपना नाम, मोबाइल नंबर और समस्या दर्ज करें</h2>
+        <form id="lawForm">
+            <input type="text" id="name" placeholder="अपना नाम" required>
+            <input type="tel" id="mobile" placeholder="मोबाइल नंबर" required>
+            <textarea id="problem" placeholder="अपनी समस्या यहाँ लिखें..." required></textarea>
+            <button type="submit">सबमिट करें</button>
+        </form>
+    </section>
+
+    <!-- ✅ Green Popup Message -->
+    <div id="popupMessage" class="popup">
+        <p>शुक्रिया! हम अगले 3-4 घंटे में आपसे संपर्क करेंगे।<br>  
+        जय हिंद! वंदे मातरम्! अपना ध्यान रखिएगा!</p>
+        <button onclick="closePopup()">OK</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
