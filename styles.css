@@ -1,14 +1,17 @@
+/* ✅ Full Page Background Color */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #e3f2fd;  /* 🔹 Light Blue Background */
     text-align: center;
-    padding: 20px;
+    margin: 0;
+    padding: 0;
 }
 
+/* ✅ Header Styling */
 header {
-    background-color: #007bff;  /* Blue Header */
+    background-color: #007bff;  /* 🔹 Blue Header */
     color: white;
-    padding: 15px;
+    padding: 20px;
     font-size: 22px;
 }
 
@@ -19,6 +22,7 @@ nav a {
     margin: 0 10px;
 }
 
+/* ✅ Form Box */
 .content {
     background-color: white;
     padding: 20px;
@@ -28,6 +32,7 @@ nav a {
     box-shadow: 0px 0px 10px gray;
 }
 
+/* ✅ Text Colors */
 h2 {
     color: #007bff;
 }
@@ -37,6 +42,7 @@ p {
     color: #333;
 }
 
+/* ✅ Form Styling */
 form {
     display: flex;
     flex-direction: column;
@@ -52,8 +58,9 @@ form input, form textarea {
     font-size: 16px;
 }
 
+/* ✅ Submit Button */
 button {
-    background-color: green;  /* Green Submit Button */
+    background-color: green;  /* 🔹 Green Button */
     color: white;
     padding: 10px 20px;
     border: none;
@@ -66,8 +73,9 @@ button:hover {
     background-color: darkgreen;
 }
 
+/* ✅ Popup Message */
 .popup {
-    background-color: #28a745;  /* Green Popup */
+    background-color: #28a745;  /* 🔹 Green Popup */
     color: white;
     padding: 15px;
     position: fixed;
@@ -77,6 +85,7 @@ button:hover {
     box-shadow: 0px 0px 10px gray;
     display: none;
 }
+
 
 
 
