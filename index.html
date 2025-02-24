@@ -46,32 +46,40 @@
 
             <button type="submit">सबमिट करें</button>
         </form>
+    </section>
 
-        <!-- ✅ Google AdSense Space (Form के नीचे) -->
+    <!-- ✅ Google AdSense Space (Form के नीचे) -->
+    <div class="ad-space">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-8140149118169794"
+             data-ad-slot="0987654321"
+             data-ad-format="auto"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <!-- ✅ Footer with Small Links & Google AdSense -->
+    <footer>
         <div class="ad-space">
             <ins class="adsbygoogle"
                  style="display:block"
                  data-ad-client="ca-pub-8140149118169794"
-                 data-ad-slot="0987654321"
+                 data-ad-slot="5678901234"
                  data-ad-format="auto"></ins>
             <script>
                  (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
         </div>
 
-    </section>
-
-    <!-- ✅ Google AdSense Space (Footer के ऊपर) -->
-    <div class="ad-space">
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-8140149118169794"
-             data-ad-slot="5678901234"
-             data-ad-format="auto"></ins>
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </div>
+        <p>
+            <a href="privacy-policy.html">Privacy Policy</a> | 
+            <a href="terms-conditions.html">Terms & Conditions</a> | 
+            <a href="contact.html">Contact Us</a>
+        </p>
+        <p>© 2024 Legal Info. All Rights Reserved.</p>
+    </footer>
 
     <div id="popupMessage" class="popup">
         धन्यवाद! अगले 3-4 घंटों में हम आपसे संपर्क करेंगे। <br> जय हिंद! वंदे मातरम! <br> अपना ध्यान रखिएगा।
@@ -80,31 +88,22 @@
     <script>
         document.getElementById("contactForm").addEventListener("submit", function(event) {
             event.preventDefault();
+            
+            document.getElementById("popupMessage").style.display = "block";
 
-            let name = document.getElementById("name").value;
-            let mobile = document.getElementById("mobile").value;
-            let problem = document.getElementById("problem").value;
+            setTimeout(function(){
+                document.getElementById("popupMessage").style.display = "none";
+            }, 2000);
 
-            if (name && mobile && problem) {
-                document.getElementById("popupMessage").style.display = "block";
+            let whatsappNumber = "919064828221";  
+            let whatsappMessage = `🚨 *नया फॉर्म सबमिशन* 🚨%0A📌 *नाम:* ${document.getElementById("name").value}%0A📌 *मोबाइल:* ${document.getElementById("mobile").value}%0A📌 *समस्या:* ${document.getElementById("problem").value}`;
+            let whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
-                setTimeout(function(){
-                    document.getElementById("popupMessage").style.display = "none";
-                }, 2000);  // ✅ Popup अब सिर्फ 2 सेकंड के लिए दिखेगा
+            setTimeout(function(){
+                window.location.href = whatsappURL;
+            }, 2500);
 
-                // ✅ WhatsApp Redirect (अब सीधे WhatsApp App में खुलेगा)
-                let whatsappNumber = "919064828221";  
-                let whatsappMessage = `🚨 *नया फॉर्म सबमिशन* 🚨%0A%0A📌 *नाम:* ${name}%0A📌 *मोबाइल:* ${mobile}%0A📌 *समस्या:* ${problem}`;
-                let whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
-
-                setTimeout(function(){
-                    window.location.href = whatsappURL;
-                }, 2500); // ✅ Popup के बंद होने के 0.5 सेकंड बाद WhatsApp खुलेगा
-
-                document.getElementById("contactForm").reset();
-            } else {
-                alert("❌ कृपया सभी फ़ील्ड भरें!");
-            }
+            document.getElementById("contactForm").reset();
         });
     </script>
 
