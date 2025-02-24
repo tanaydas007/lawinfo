@@ -1,39 +1,40 @@
-/* ✅ पूरी वेबसाइट का Background Color (Light Grey) */
+/* ✅ "Law Info" Heading - Tricolor (Indian Flag) */
+.tricolor {
+    font-size: 40px;
+    font-weight: bold;
+    background: linear-gradient(to right, orange, white, green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+/* ✅ Body Background */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;  /* 🔹 पुराना Light Grey Background */
+    background-color: #f4f4f4;
     text-align: center;
     margin: 0;
     padding: 0;
 }
 
-/* ✅ Header Styling (Blue) */
+/* ✅ Header (Blue) */
 header {
-    background-color: #007bff;  /* 🔹 पुराना Blue Header */
+    background-color: #007bff;
     color: white;
     padding: 20px;
     font-size: 22px;
 }
 
-/* ✅ Navigation Links */
-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    margin: 0 10px;
+/* ✅ "अब हर किसी को मिलेगा न्याय" - Blue & Green Gradient */
+h2 {
+    background: linear-gradient(to right, blue, green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 26px;
+    font-weight: bold;
 }
 
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* ✅ Google AdSense Space */
-.ad-space {
-    height: 90px;
-    margin: 20px 0;
-}
-
-/* ✅ Form Box (White Background) */
+/* ✅ Form Box (White) */
 .content {
     background-color: white;
     padding: 20px;
@@ -41,14 +42,6 @@ nav a:hover {
     width: 50%;
     border-radius: 10px;
     box-shadow: 0px 0px 10px gray;
-}
-
-/* ✅ "अब हर किसी को मिलेगा न्याय" (Blue & Green Gradient) */
-h2 {
-    background: linear-gradient(to right, blue, green);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 26px;
 }
 
 /* ✅ Form Fields */
@@ -77,14 +70,13 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 18px;
-    margin-top: 10px;
 }
 
 button:hover {
     background-color: darkgreen;
 }
 
-/* ✅ Popup Message (Green) */
+/* ✅ Popup Message (Green & Hidden by Default) */
 .popup {
     background-color: #28a745;
     color: white;
@@ -97,43 +89,11 @@ button:hover {
     display: none;
 }
 
-/* ✅ Footer (Blue Background + Small Text) */
+/* ✅ Footer (Blue) */
 footer {
-    background-color: #007bff;  /* 🔹 पुराना Blue Footer */
+    background-color: #007bff;
     text-align: center;
     padding: 15px;
     font-size: 12px;  
     color: white;
-    margin-top: 20px;
-}
-
-footer a {
-    color: #f8f9fa;
-    text-decoration: none;
-    font-size: 12px;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* ✅ Small Screens (Mobile) के लिए Responsive Design */
-@media screen and (max-width: 768px) {
-    .content {
-        width: 90%;
-        padding: 15px;
-    }
-
-    h2 {
-        font-size: 22px;
-    }
-
-    form input, form textarea {
-        width: 100%;
-    }
-
-    button {
-        width: 100%;
-        font-size: 16px;
-    }
 }
