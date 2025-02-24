@@ -30,6 +30,17 @@
         <h2>अब हर किसी को मिलेगा न्याय</h2>
         <p>हम आपकी मदद करने के लिए हमेशा तैयार हैं। अपनी समस्या नीचे दर्ज करें।</p>
 
+        <!-- ✅ Tricolor Hindi & English Text with Underline (White Removed) -->
+        <p class="tricolor-text">
+            हम <u>कार्यरत एवं सेवानिवृत्त कर्मियों</u> के अधिकारों के लिए संघर्ष करते हैं और उन्हें न्याय दिलाने में सहायता प्रदान करते हैं।  
+            हमारा उद्देश्य उन कर्मियों को <u>उनका उचित हक़</u> दिलवाना है जो अपने सेवा के दौरान या सेवानिवृत्ति के बाद अपने अधिकारों से वंचित रह गए हैं।
+        </p>
+
+        <p class="tricolor-text">
+            We <u>fight for the rights of active and retired personnel</u> and assist them in securing justice.  
+            Our goal is to ensure that those who have been deprived of their <u>rightful entitlements</u> during or after their service receive the benefits they deserve.
+        </p>
+
         <form id="contactForm">
             <label>नाम:</label>
             <input type="text" id="name" placeholder="अपना नाम दर्ज करें" required>
@@ -58,17 +69,6 @@
 
     <!-- ✅ Footer with Small Links & Google AdSense -->
     <footer>
-        <div class="ad-space">
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-8140149118169794"
-                 data-ad-slot="5678901234"
-                 data-ad-format="auto"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
-
         <p>
             <a href="about.html">About Us</a> | 
             <a href="disclaimer.html">Disclaimer</a> |  
@@ -78,41 +78,6 @@
         </p>
         <p>© 2024 Legal Info. All Rights Reserved.</p>
     </footer>
-
-    <div id="popupMessage" class="popup">
-        ✅ आपका फ़ॉर्म सफलतापूर्वक सबमिट हो गया! <br> हम अगले 3-4 घंटों में आपसे संपर्क करेंगे। <br> 🇮🇳 जय हिंद! वंदे मातरम! 🚀
-    </div>
-
-    <script>
-        document.getElementById("contactForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-
-            let name = document.getElementById("name").value;
-            let mobile = document.getElementById("mobile").value;
-            let problem = document.getElementById("problem").value;
-
-            if (name && mobile && problem) {
-                let popup = document.getElementById("popupMessage");
-                popup.style.display = "block";
-
-                setTimeout(function(){
-                    popup.style.display = "none";
-                }, 2000); // ✅ Popup 2 सेकंड में Hide होगा
-
-                let whatsappNumber = "919064828221";  
-                let whatsappMessage = `🚨 *नया फॉर्म सबमिशन* 🚨%0A📌 *नाम:* ${name}%0A📌 *मोबाइल:* ${mobile}%0A📌 *समस्या:* ${problem}`;
-                let whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
-
-                setTimeout(function(){
-                    window.location.href = whatsappURL;
-                }, 2500);
-
-                document.getElementById("contactForm").reset();
-            } else {
-                alert("❌ कृपया सभी फ़ील्ड भरें!");
-            }
-        });
-    </script>
 
 </body>
 </html>
