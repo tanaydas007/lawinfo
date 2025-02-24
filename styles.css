@@ -8,7 +8,7 @@
     display: inline-block;
 }
 
-/* ✅ Tricolor (Saffron & Green) Text + Underline */
+/* ✅ Tricolor Text */
 .tricolor-text {
     font-size: 18px;
     font-weight: bold;
@@ -20,7 +20,7 @@
     width: 80%;
 }
 
-/* ✅ Body Background */
+/* ✅ Body */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -29,7 +29,7 @@ body {
     padding: 0;
 }
 
-/* ✅ Header (Blue) */
+/* ✅ Header */
 header {
     background-color: #007bff;
     color: white;
@@ -37,16 +37,7 @@ header {
     font-size: 22px;
 }
 
-/* ✅ "अब हर किसी को मिलेगा न्याय" - Blue & Green Gradient */
-h2 {
-    background: linear-gradient(to right, blue, green);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 26px;
-    font-weight: bold;
-}
-
-/* ✅ Form Box (White) */
+/* ✅ Form Box */
 .content {
     background-color: white;
     padding: 20px;
@@ -102,19 +93,16 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* ✅ Mobile Responsive Design */
-@media screen and (max-width: 768px) {
-    .content {
-        width: 90%;
-        padding: 15px;
-    }
+/* ✅ Google Ads in Footer */
+.ad-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
 
-    .tricolor-text {
-        width: 95%;
-    }
-
-    button {
-        width: 100%;
-        font-size: 16px;
-    }
+.ad-space {
+    height: 90px;
+    margin: 10px;
+    text-align: center;
 }
