@@ -94,6 +94,16 @@ footer {
     background-color: #007bff;
     text-align: center;
     padding: 15px;
-    font-size: 12px;  
+    font-size: 10px;  /* 🔹 अब छोटा कर दिया */
     color: white;
+}
+
+footer a {
+    color: #f8f9fa;
+    text-decoration: none;
+    font-size: 10px;  /* 🔹 Links भी छोटे कर दिए */
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
