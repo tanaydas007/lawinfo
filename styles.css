@@ -23,6 +23,10 @@ nav a {
     margin: 0 10px;
 }
 
+nav a:hover {
+    text-decoration: underline;
+}
+
 /* ✅ Google AdSense Space */
 .ad-space {
     height: 90px;
@@ -33,7 +37,7 @@ nav a {
 .content {
     background-color: white;
     padding: 20px;
-    margin: 10px auto;
+    margin: 20px auto;
     width: 50%;
     border-radius: 10px;
     box-shadow: 0px 0px 10px gray;
@@ -111,4 +115,25 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+/* ✅ Small Screens (Mobile) के लिए Responsive Design */
+@media screen and (max-width: 768px) {
+    .content {
+        width: 90%;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    form input, form textarea {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        font-size: 16px;
+    }
 }
