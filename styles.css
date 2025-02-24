@@ -1,27 +1,15 @@
-/* ✅ Full Page Background Color */
+/* ✅ पूरी वेबसाइट का Background Color (Light Grey) */
 body {
     font-family: Arial, sans-serif;
-    background-color: #e3f2fd;  /* 🔹 Light Blue Background */
+    background-color: #f4f4f4;  /* 🔹 पुराना Light Grey Background */
     text-align: center;
     margin: 0;
     padding: 0;
 }
 
-/* ✅ Legal Info Box (Green & Black Mixture) */
-.legal-info {
-    background: linear-gradient(to right, black, green);
-    color: white;
-    padding: 15px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 8px;
-    display: inline-block;
-    margin-top: 10px;
-}
-
-/* ✅ Header Styling */
+/* ✅ Header Styling (Blue) */
 header {
-    background-color: #007bff;  /* 🔹 Blue Header */
+    background-color: #007bff;  /* 🔹 पुराना Blue Header */
     color: white;
     padding: 20px;
     font-size: 22px;
@@ -41,7 +29,7 @@ nav a {
     margin: 20px 0;
 }
 
-/* ✅ Form Box */
+/* ✅ Form Box (White Background) */
 .content {
     background-color: white;
     padding: 20px;
@@ -51,9 +39,9 @@ nav a {
     box-shadow: 0px 0px 10px gray;
 }
 
-/* ✅ "अब हर किसी को मिलेगा न्याय" (Green & Blue Gradient) */
+/* ✅ "अब हर किसी को मिलेगा न्याय" (Blue & Green Gradient) */
 h2 {
-    background: linear-gradient(to right, green, blue);
+    background: linear-gradient(to right, blue, green);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 26px;
@@ -76,7 +64,7 @@ form input, form textarea {
     box-sizing: border-box;
 }
 
-/* ✅ Submit Button */
+/* ✅ Submit Button (Green) */
 button {
     background-color: green;
     color: white;
@@ -92,7 +80,7 @@ button:hover {
     background-color: darkgreen;
 }
 
-/* ✅ Popup Message */
+/* ✅ Popup Message (Green) */
 .popup {
     background-color: #28a745;
     color: white;
@@ -103,4 +91,24 @@ button:hover {
     border-radius: 5px;
     box-shadow: 0px 0px 10px gray;
     display: none;
+}
+
+/* ✅ Footer (Blue Background + Small Text) */
+footer {
+    background-color: #007bff;  /* 🔹 पुराना Blue Footer */
+    text-align: center;
+    padding: 15px;
+    font-size: 12px;  
+    color: white;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #f8f9fa;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
