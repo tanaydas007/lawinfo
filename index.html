@@ -10,7 +10,7 @@
 <body>
 
     <header>
-        <h1>Legal Info</h1>
+        <h1 class="tricolor">Law Info</h1>  
         <p class="legal-info">(CAPF, CAPSP, GJSPKK Disability Pension) Legal Advice</p>
         <nav>
             <a href="about.html">About Us</a> | 
@@ -82,28 +82,37 @@
     </footer>
 
     <div id="popupMessage" class="popup">
-        धन्यवाद! अगले 3-4 घंटों में हम आपसे संपर्क करेंगे। <br> जय हिंद! वंदे मातरम! <br> अपना ध्यान रखिएगा।
+        ✅ आपका फ़ॉर्म सफलतापूर्वक सबमिट हो गया! <br> हम अगले 3-4 घंटों में आपसे संपर्क करेंगे। <br> 🇮🇳 जय हिंद! वंदे मातरम! 🚀
     </div>
 
     <script>
         document.getElementById("contactForm").addEventListener("submit", function(event) {
             event.preventDefault();
-            
-            document.getElementById("popupMessage").style.display = "block";
 
-            setTimeout(function(){
-                document.getElementById("popupMessage").style.display = "none";
-            }, 2000);
+            let name = document.getElementById("name").value;
+            let mobile = document.getElementById("mobile").value;
+            let problem = document.getElementById("problem").value;
 
-            let whatsappNumber = "919064828221";  
-            let whatsappMessage = `🚨 *नया फॉर्म सबमिशन* 🚨%0A📌 *नाम:* ${document.getElementById("name").value}%0A📌 *मोबाइल:* ${document.getElementById("mobile").value}%0A📌 *समस्या:* ${document.getElementById("problem").value}`;
-            let whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+            if (name && mobile && problem) {
+                let popup = document.getElementById("popupMessage");
+                popup.style.display = "block";
 
-            setTimeout(function(){
-                window.location.href = whatsappURL;
-            }, 2500);
+                setTimeout(function(){
+                    popup.style.display = "none";
+                }, 2000); // ✅ Popup 2 सेकंड में Hide होगा
 
-            document.getElementById("contactForm").reset();
+                let whatsappNumber = "919064828221";  
+                let whatsappMessage = `🚨 *नया फॉर्म सबमिशन* 🚨%0A📌 *नाम:* ${name}%0A📌 *मोबाइल:* ${mobile}%0A📌 *समस्या:* ${problem}`;
+                let whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
+                setTimeout(function(){
+                    window.location.href = whatsappURL;
+                }, 2500);
+
+                document.getElementById("contactForm").reset();
+            } else {
+                alert("❌ कृपया सभी फ़ील्ड भरें!");
+            }
         });
     </script>
 
