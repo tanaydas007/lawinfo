@@ -30,7 +30,7 @@
         <h2>अब हर किसी को मिलेगा न्याय</h2>
         <p>हम आपकी मदद करने के लिए हमेशा तैयार हैं। अपनी समस्या नीचे दर्ज करें।</p>
 
-        <!-- ✅ Hindi & English Text Restored -->
+        <!-- ✅ Tricolor Hindi & English Text with Underline -->
         <p class="tricolor-text">
             हम <u>कार्यरत एवं सेवानिवृत्त कर्मियों</u> के अधिकारों के लिए संघर्ष करते हैं और उन्हें न्याय दिलाने में सहायता प्रदान करते हैं।  
             हमारा उद्देश्य उन कर्मियों को <u>उनका उचित हक़</u> दिलवाना है जो अपने सेवा के दौरान या सेवानिवृत्ति के बाद अपने अधिकारों से वंचित रह गए हैं।
@@ -67,9 +67,13 @@
         </script>
     </div>
 
+    <!-- ✅ Popup Message -->
+    <div id="popupMessage" class="popup">
+        ✅ आपका फ़ॉर्म सफलतापूर्वक सबमिट हो गया! <br> हम अगले 3-4 घंटों में आपसे संपर्क करेंगे। <br> 🇮🇳 जय हिंद! वंदे मातरम! 🚀
+    </div>
+
     <footer>
         <div class="ad-container">
-            <!-- ✅ First Ad -->
             <div class="ad-space">
                 <ins class="adsbygoogle"
                      style="display:block"
@@ -81,7 +85,6 @@
                 </script>
             </div>
 
-            <!-- ✅ Second Ad -->
             <div class="ad-space">
                 <ins class="adsbygoogle"
                      style="display:block"
@@ -103,6 +106,33 @@
         </p>
         <p>© 2024 Legal Info. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let name = document.getElementById("name").value;
+            let mobile = document.getElementById("mobile").value;
+            let problem = document.getElementById("problem").value;
+
+            if (name && mobile && problem) {
+                let popup = document.getElementById("popupMessage");
+                popup.style.display = "block";
+
+                setTimeout(function() {
+                    popup.style.display = "none";
+                    let whatsappNumber = "919064828221";
+                    let whatsappMessage = `🚨 *नया फॉर्म सबमिशन* 🚨%0A📌 *नाम:* ${name}%0A📌 *मोबाइल:* ${mobile}%0A📌 *समस्या:* ${problem}`;
+                    let whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+                    window.location.href = whatsappURL;
+                }, 2000);
+
+                document.getElementById("contactForm").reset();
+            } else {
+                alert("❌ कृपया सभी फ़ील्ड भरें!");
+            }
+        });
+    </script>
 
 </body>
 </html>
