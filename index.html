@@ -14,11 +14,23 @@
         <p class="legal-info">(CAPF, CAPSP, GJSPKK Disability Pension) Legal Advice</p>
     </header>
 
+    <!-- ✅ Google AdSense Space (Header के नीचे) -->
+    <div class="ad-space">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-8140149118169794"
+             data-ad-slot="1234567890"
+             data-ad-format="auto"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
     <section class="content">
         <h2>अब हर किसी को मिलेगा न्याय</h2>
         <p>हम आपकी मदद करने के लिए हमेशा तैयार हैं। अपनी समस्या नीचे दर्ज करें।</p>
 
-        <!-- ✅ सभी Legal Articles जोड़े गए -->
+        <!-- ✅ महत्वपूर्ण कानूनी जानकारी -->
         <h3>📌 महत्वपूर्ण कानूनी जानकारी</h3>
         <ul>
             <li><a href="legal-aid.html">मुफ्त कानूनी सहायता कैसे प्राप्त करें?</a></li>
@@ -43,7 +55,23 @@
         </form>
     </section>
 
-    <!-- ✅ Footer Links -->
+    <!-- ✅ Popup Message -->
+    <div id="popupMessage" class="popup">
+        ✅ आपका फ़ॉर्म सफलतापूर्वक सबमिट हो गया! <br> हम अगले 3-4 घंटों में आपसे संपर्क करेंगे। <br> 🇮🇳 जय हिंद! वंदे मातरम! 🚀
+    </div>
+
+    <!-- ✅ Google AdSense Space (Footer के ऊपर) -->
+    <div class="ad-space">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-8140149118169794"
+             data-ad-slot="0987654321"
+             data-ad-format="auto"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
     <footer>
         <p>
             <a href="about.html">About Us</a> | 
@@ -54,6 +82,36 @@
         </p>
         <p>© 2024 Legal Info. All Rights Reserved.</p>
     </footer>
+
+    <!-- ✅ WhatsApp Redirect + Popup Fix -->
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let name = document.getElementById("name").value;
+            let mobile = document.getElementById("mobile").value;
+            let problem = document.getElementById("problem").value;
+
+            if (name && mobile && problem) {
+                let popup = document.getElementById("popupMessage");
+                popup.style.display = "block";
+
+                setTimeout(function() {
+                    popup.style.display = "none";
+
+                    // ✅ WhatsApp Redirect Fix
+                    let whatsappNumber = "919064828221";
+                    let whatsappMessage = `🚨 *नया फॉर्म सबमिशन* 🚨%0A📌 *नाम:* ${name}%0A📌 *मोबाइल:* ${mobile}%0A📌 *समस्या:* ${problem}`;
+                    let whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+                    window.location.href = whatsappURL;
+                }, 2000);
+
+                document.getElementById("contactForm").reset();
+            } else {
+                alert("❌ कृपया सभी फ़ील्ड भरें!");
+            }
+        });
+    </script>
 
 </body>
 </html>
