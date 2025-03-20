@@ -1,95 +1,24 @@
-/* ✅ "Law Info" Heading - Tricolor (Only Saffron & Green) */
+/* ✅ Tricolor Heading */
 .tricolor {
     font-size: 40px;
     font-weight: bold;
     background: linear-gradient(to right, orange, green);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    display: inline-block;
 }
 
-/* ✅ Tricolor Text (Only Saffron & Green) */
-.tricolor-text {
-    font-size: 18px;
-    font-weight: bold;
-    background: linear-gradient(to right, orange, green);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-align: center;
-    margin: 10px auto;
-    width: 80%;
-}
-
-/* ✅ Body Background */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-/* ✅ Header */
-header {
-    background-color: #007bff;
-    color: white;
-    padding: 20px;
-    font-size: 22px;
-}
-
-/* ✅ "अब हर किसी को मिलेगा न्याय" - Blue & Green Gradient */
-h2 {
-    background: linear-gradient(to right, blue, green);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 26px;
-    font-weight: bold;
-}
-
-/* ✅ Main Content Box */
-.content {
-    background: white;
-    padding: 20px;
-    margin: 20px auto;
-    width: 50%;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px gray;
-}
-
-/* ✅ Legal Info Articles */
-.content h3 {
-    color: #007bff;
-    font-size: 20px;
-    text-align: left;
-}
-
-.content ul {
-    text-align: left;
-    padding-left: 20px;
-}
-
-.content ul li {
-    font-size: 16px;
+/* ✅ Tricolor Form Fields */
+form input, form textarea {
+    width: 90%;
+    padding: 10px;
     margin: 5px 0;
+    border: 2px solid orange;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
 }
 
-.content ul li a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.content ul li a:hover {
-    text-decoration: underline;
-}
-
-/* ✅ Google Ads */
-.ad-space {
-    height: 90px;
-    margin: 10px;
-    text-align: center;
-}
-
-/* ✅ Submit Button */
+/* ✅ Submit Button (Green) */
 button {
     background-color: green;
     color: white;
@@ -98,7 +27,6 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 18px;
-    margin-top: 10px;
 }
 
 button:hover {
@@ -114,50 +42,8 @@ button:hover {
     bottom: 20px;
     right: 20px;
     border-radius: 5px;
-    box-shadow: 0px 0px 10px gray;
     display: none;
     font-size: 16px;
     text-align: center;
     width: 250px;
-}
-
-/* ✅ Footer */
-footer {
-    background-color: #007bff;
-    text-align: center;
-    padding: 15px;
-    font-size: 12px;  
-    color: white;
-}
-
-footer a {
-    color: #f8f9fa;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* ✅ Google Ads in Footer */
-.ad-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-/* ✅ Mobile Responsive */
-@media screen and (max-width: 768px) {
-    .content {
-        width: 90%;
-        padding: 15px;
-    }
-
-    .popup {
-        bottom: 10px;
-        right: 10px;
-        width: 200px;
-        font-size: 14px;
-    }
 }
