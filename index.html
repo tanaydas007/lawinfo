@@ -30,17 +30,17 @@
         <h2>अब हर किसी को मिलेगा न्याय</h2>
         <p>हम आपकी मदद करने के लिए हमेशा तैयार हैं। अपनी समस्या नीचे दर्ज करें।</p>
 
-        <!-- ✅ Legal Articles List -->
+        <!-- ✅ Legal Articles List (Word Count Removed) -->
         <h3>📌 महत्वपूर्ण कानूनी जानकारी</h3>
         <ul>
-            <li><a href="legal-aid.html">मुफ्त कानूनी सहायता कैसे प्राप्त करें? (1000+ शब्द)</a></li>
-            <li><a href="court-case.html">न्यायालय में केस कैसे दायर करें? (1500+ शब्द)</a></li>
-            <li><a href="lok-adalat.html">लोक अदालत क्या है और इसमें केस कैसे सुलझाएं? (2000+ शब्द)</a></li>
-            <li><a href="disability-pension.html">डिसेबिलिटी पेंशन और कानूनी मदद कैसे प्राप्त करें? (2500+ शब्द)</a></li>
-            <li><a href="domestic-violence.html">घरेलू हिंसा से बचाव के लिए कानूनी अधिकार (3000+ शब्द)</a></li>
+            <li><a href="legal-aid.html">मुफ्त कानूनी सहायता कैसे प्राप्त करें?</a></li>
+            <li><a href="court-case.html">न्यायालय में केस कैसे दायर करें?</a></li>
+            <li><a href="lok-adalat.html">लोक अदालत क्या है और इसमें केस कैसे सुलझाएं?</a></li>
+            <li><a href="disability-pension.html">डिसेबिलिटी पेंशन और कानूनी मदद कैसे प्राप्त करें?</a></li>
+            <li><a href="domestic-violence.html">घरेलू हिंसा से बचाव के लिए कानूनी अधिकार</a></li>
         </ul>
 
-        <!-- ✅ Contact Form (Tricolor Style) -->
+        <!-- ✅ Contact Form -->
         <form id="contactForm">
             <label>Name:</label>
             <input type="text" id="name" placeholder="अपना नाम दर्ज करें" required>
@@ -55,11 +55,6 @@
         </form>
     </section>
 
-    <!-- ✅ Popup Message -->
-    <div id="popupMessage" class="popup">
-        ✅ आपका फ़ॉर्म सफलतापूर्वक सबमिट हो गया! <br> हम अगले 3-4 घंटों में आपसे संपर्क करेंगे। <br> 🇮🇳 जय हिंद! वंदे मातरम! 🚀
-    </div>
-
     <!-- ✅ Footer Links -->
     <footer>
         <p>
@@ -71,35 +66,6 @@
         </p>
         <p>© 2024 Legal Info. All Rights Reserved.</p>
     </footer>
-
-    <script>
-        document.getElementById("contactForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-
-            let name = document.getElementById("name").value;
-            let mobile = document.getElementById("mobile").value;
-            let problem = document.getElementById("problem").value;
-
-            if (name && mobile && problem) {
-                let popup = document.getElementById("popupMessage");
-                popup.style.display = "block";
-
-                setTimeout(function() {
-                    popup.style.display = "none";
-
-                    // ✅ WhatsApp Redirect
-                    let whatsappNumber = "919064828221";
-                    let whatsappMessage = `🚨 *नया फॉर्म सबमिशन* 🚨%0A📌 *नाम:* ${name}%0A📌 *मोबाइल:* ${mobile}%0A📌 *समस्या:* ${problem}`;
-                    let whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
-                    window.location.href = whatsappURL;
-                }, 2000);
-
-                document.getElementById("contactForm").reset();
-            } else {
-                alert("❌ कृपया सभी फ़ील्ड भरें!");
-            }
-        });
-    </script>
 
 </body>
 </html>
