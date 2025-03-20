@@ -1,3 +1,25 @@
+/* ✅ "Law Info" Heading - Tricolor (Only Saffron & Green) */
+.tricolor {
+    font-size: 40px;
+    font-weight: bold;
+    background: linear-gradient(to right, orange, green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+/* ✅ Tricolor Text (Only Saffron & Green) */
+.tricolor-text {
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(to right, orange, green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin: 10px auto;
+    width: 80%;
+}
+
 /* ✅ Body Background */
 body {
     font-family: Arial, sans-serif;
@@ -13,6 +35,15 @@ header {
     color: white;
     padding: 20px;
     font-size: 22px;
+}
+
+/* ✅ "अब हर किसी को मिलेगा न्याय" - Blue & Green Gradient */
+h2 {
+    background: linear-gradient(to right, blue, green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 26px;
+    font-weight: bold;
 }
 
 /* ✅ Main Content Box */
@@ -58,6 +89,38 @@ header {
     text-align: center;
 }
 
+/* ✅ Submit Button */
+button {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: darkgreen;
+}
+
+/* ✅ Popup Message */
+.popup {
+    background-color: #28a745;
+    color: white;
+    padding: 15px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px gray;
+    display: none;
+    font-size: 16px;
+    text-align: center;
+    width: 250px;
+}
+
 /* ✅ Footer */
 footer {
     background-color: #007bff;
@@ -74,6 +137,14 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+/* ✅ Google Ads in Footer */
+.ad-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 /* ✅ Mobile Responsive */
